@@ -1,4 +1,4 @@
-console.log(((90-65+3+26)%26)+65);//B
+
 function caesarCipher(str, shift){
     let arr = str.split('');
     for(let i = 0; i < str.length; i++){
@@ -8,7 +8,7 @@ function caesarCipher(str, shift){
             let charCode = ((code-65+3+26)%26)+65;
             arr[i] = String.fromCharCode(charCode);    
         }
-        else if (arr[i].charCodeAt() >=97 && arr[i].charCodeAt() <= 122) {
+        else if (arr[i].charCodeAt() >=97 && arr[i].charCodeAt() <= 122) {//a-z
             let code = arr[i].charCodeAt();
             let charCode = ((code-97+3+26)%26)+97;
             arr[i] = String.fromCharCode(charCode);
@@ -17,4 +17,4 @@ function caesarCipher(str, shift){
     }
     return arr.join('');
 }
-console.log(caesarCipher("HeLLo", 3)); 
+module.exports = caesarCipher;
