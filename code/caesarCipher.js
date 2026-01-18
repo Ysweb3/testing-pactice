@@ -1,5 +1,5 @@
 console.log(((90-65+3+26)%26)+65);//B
-function caesarChipher(str, shift){
+function caesarCipher(str, shift){
     let arr = str.split('');
     for(let i = 0; i < str.length; i++){
         shift = shift % 26;
@@ -17,4 +17,4 @@ function caesarChipher(str, shift){
     }
     return arr.join('');
 }
-console.log(caesarChipher("xyz", 3)); 
+console.log(caesarCipher("HeLLo", 3)); 
